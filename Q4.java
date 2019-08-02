@@ -1,25 +1,26 @@
-class pallindrome
-{
-	public static void main(String args[])
+class pallindrom
+ {
+	public static void main(String[] args) 
 	{
-		int value = 0;
-        for(int i = 100;i <=999;i++)
-        {
-            for(int j = i;j <=999;j++)
-            {
-                int value1 = i * j;
-                StringBuilder sb1 = new StringBuilder(""+value1);
-                String sb2 = ""+value1;
-                sb1.reverse();
-                if(sb2.equals(sb1.toString()) && value<value1) {
-                    value = value1;
-
-                }
-
-            }
-        }
-
-        System.out.println(value);
-   }    
+		int max=0;
+		for(int i=999;i>=100;i--)
+		{
+			for(int j=i;j>=100;j--)
+			{
+			int p=i*j;
+			if(p<max)
+			break;
+			int n=p;
+			int r=0;
+			while(n!=0)
+			{
+				r=r*10+n%10;
+				n/=10;
+			}
+			if(p==r && p>max)
+			max=p;
+			}
+		}
+		System.out.println(max);
+	}
 }
-    
