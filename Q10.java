@@ -1,30 +1,24 @@
-class Prime
+class prime
 {
 	public static void main(String args[])
 	{
-		int i, number, count;
-		long s=0; 
+	   int j,i;
+           long n=0,c=0; 
+	   for(i=2;i<2000000;i++)
+	   {
 		
-		System.out.println(" sum of Prime Numbers from 1 to 100 are : ");	
-		for(number = 1; number <= 2000000; number++)
-		{
-			count = 0;
-		    for (i = 2; i <= number/2; i++)
-		    {
-		    	if(number % i == 0)
-		    	{
-		    		count++;
-		    		break;
-		    	}
-		    }
-		    if(count == 0 && number != 1 )
-		    {
-		    	s+=number;
-		    	//System.out.print(number + " ");
-		    }  
-		}
-		System.out.println(" ");
-		System.out.println(s);
+	    for(j=2;j<=i/2;j++)
+	    {
+                c=0;
+                if(i%j==0)
+                {		
+		   c=1;
+                   break;	
+	        }
+            }
+            if(c==0)
+	     n+=i;
+        }        
+        System.out.println(n);
    }    
-}
-    
+} 
