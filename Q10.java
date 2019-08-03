@@ -7,7 +7,7 @@ class prime
 	   for(i=2;i<2000000;i++)
 	   {
 		
-	    for(j=2;j<=i/2;j++)
+	    for(j=2;j<=Math.pow(n, 0.5) + 1;j++)
 	    {
                 c=0;
                 if(i%j==0)
