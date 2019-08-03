@@ -2,11 +2,11 @@ class LargestPrimeFactor
 {
 	public static void main(String args[])
 	{
-		long i,j,b=0,flag=0,n,m,s=0;      
+		long i,j,flag=0,n,m,s=0;      
        long a=600851475143L;    
-       b = a/2;      
+            
  
-       for(j=2;j<=b;j++)
+       for(j=2;j<=Math.pow(a, 0.5) + 1;j++)
        {      
           if(a%j==0)
           {      
@@ -28,7 +28,7 @@ class LargestPrimeFactor
                if(flag==0) 
                { 
                	s=n;
-               	System.out.println(n);
+               	
                 }  
              }
          
