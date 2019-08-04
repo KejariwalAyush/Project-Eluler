@@ -3,15 +3,25 @@
 
 What is the sum of the digits of the number 2^1000?*/
 
-public class q16 {
-	public static void main(String[] args) {
-		long n = (int)Math.pow(2, 1000);
-		long s = 0;
-		System.out.println(n);
-		while (n > 0) {
-			s += n % 10;
-			n /= 10;
-		}
-		System.out.println(s);
-	}
+import java.math.BigInteger;
+
+public class q_16 {
+    public static void main(String[] args) {
+        BigInteger f = new BigInteger("2");
+        
+        BigInteger x = f.pow(1000);
+        BigInteger a= new BigInteger("10");
+        
+        BigInteger s = new BigInteger("1");
+        BigInteger sum = new BigInteger("0");
+        while(x.compareTo(s)>0)
+        {
+            s=x.remainder(a);
+            sum=sum.add(s);
+            
+            x=x.divide(a);
+        }
+        System.out.println("");
+        System.out.println(sum);
+    }
 }
