@@ -1,23 +1,22 @@
+import java.math.BigInteger;
 
-class sumFactorial
-{
-	public static void main(String args[])
-	{
-		long a=100,i,j,sum=0,x=0;
-		long f=1;
-		for(i=1;i<=a;i++)
-		{
-			f*=i;
-		}
-		System.out.println(f);
-		int l=String.valueOf(f).length();
-		for(j=1;j<=l;j++)
-		{
-			x=(int)f%10;
-			sum+=x;
-			x=0;
-			f/=10;
-		}
+public class q20{
+	public static void main(String[] args) {
+		BigInteger f = new BigInteger("1");
+		BigInteger a= new BigInteger("10");
+		for(int i=2;i<=100;i++)
+    	f=f.multiply(BigInteger.valueOf(i));
+    	
+    	BigInteger s = new BigInteger("1");
+    	BigInteger sum = new BigInteger("0");
+    	while(f.compareTo(s)>0)
+    	{
+    		s=f.remainder(a);
+    		sum=sum.add(s);
+    		
+    		f=f.divide(a);
+    	}
+    
 		System.out.println(sum);
-   }    
+	}
 }
