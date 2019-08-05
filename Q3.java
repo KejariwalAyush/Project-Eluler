@@ -12,10 +12,7 @@ class LargestPrimeFactor
           {      
              n=j;
              m=n/2;      
-             if(n==0||n==1)
-             {         
-             }
-             else
+             if(n>1)
              {  
                for(i=2;i<=m;i++)
                {      
@@ -34,7 +31,7 @@ class LargestPrimeFactor
          
           }
           }
-         System.out.println(s + "is largest prime factor ");
+         System.out.println(s + " is largest prime factor ");
          
 	}
 }
