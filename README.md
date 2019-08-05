@@ -1,6 +1,6 @@
-# Project Eluler
+# Project Euler
 
-Programs from project eluler
+Programs from project euler
 
 
 
