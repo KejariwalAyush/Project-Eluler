@@ -6,7 +6,7 @@ class LargestPrimeFactor
        long a=600851475143L;    
             
  
-       for(j=2;j<=Math.pow(a, 0.5) + 1;j++)
+       for(j=2;j*j<=a;j++)
        {      
           if(a%j==0)
           {      
