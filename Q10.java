@@ -3,11 +3,11 @@ class prime
 	public static void main(String args[])
 	{
 	   int j,i;
-           long n=0,c=0; 
-	   for(i=2;i<2000000;i++)
+           long n=2,c=0; 
+	   for(i=3;i<2000000;i+=2)
 	   {
 		
-	    for(j=2;j<=Math.pow(n, 0.5) + 1;j++)
+	    for(j=3;j<=Math.pow(i, 0.5) + 1;j+=2)
 	    {
                 c=0;
                 if(i%j==0)
