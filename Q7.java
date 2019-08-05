@@ -2,13 +2,13 @@ class prime
 {
 	public static void main(String args[])
 	{
-		int i,n=0,c=0; 
-		for(i=1;n<=10001;i++)
+		int i=3,n=1,c=0; 
+		while(n<=10000)
 		{
-		
-			for(int j=2;j<i;j++)
+			c=0;
+			for(int j=3;j<=i/2;j+=2)
 			{
-			    c=0;
+			    
 			    if(i%j==0)
 			    {
 					
@@ -19,8 +19,9 @@ class prime
                          }
                          if(c==0)
 	                  n++;
+			i+=2;
 		 }        
-              System.out.println(i-1);
+              System.out.println(i-2);
    }    
 }
     
